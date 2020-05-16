@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './router/Root';
+import Router from './router/'
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-
+console.log(Router)
 ReactDOM.render(
-  <Root />,
+  <Router></Router>,
   document.getElementById('root')
 );
