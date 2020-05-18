@@ -18,7 +18,7 @@ const Home = (props) =>{
       <Button type="primary"><Link to="/about/2">about</Link></Button>
       <Button onClick={props.handerClick}>打印</Button>
       <Click>1111</Click>
-      <Click2 color={true}>1111</Click2>
+      <Click2 color={'true'}>1111</Click2>
     </div>
   )
 }
