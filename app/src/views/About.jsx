@@ -11,7 +11,6 @@ const About = (props) =>{
     <div>
       <h3>about</h3>
       <Button><Link to="/">home</Link></Button>
-      <Button><Link to="/b">B</Link></Button>
     </div>
   )
 }

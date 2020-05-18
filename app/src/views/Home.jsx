@@ -1,8 +1,10 @@
 import React,{useEffect} from 'react'
+import '../assets/css/home.css'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd';
 import { connect } from 'react-redux'
 import HeaderArea from '../components/layout/Header'
+import {Click,Click2} from '../styleJS/index'
 
 const Home = (props) =>{
   useEffect(()=>{
@@ -11,9 +13,12 @@ const Home = (props) =>{
   return (
     <div>
       <HeaderArea></HeaderArea>
-      <h3>home</h3>
+      <h3 className="home-tit">home</h3>
       <p>{props.name}</p>
       <Button type="primary"><Link to="/about/2">about</Link></Button>
+      <Button onClick={props.handerClick}>打印</Button>
+      <Click>1111</Click>
+      <Click2 color={true}>1111</Click2>
     </div>
   )
 }
@@ -24,4 +29,15 @@ const mapStateToProps = (state)=> {
   }
 }
 
-export default connect(mapStateToProps, null)(Home)
+const mapDispatchToProps = (dispatch)=> {
+  return {
+    handerClick(){
+      const action = {
+        type:'click'
+      }
+      dispatch(action);
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
