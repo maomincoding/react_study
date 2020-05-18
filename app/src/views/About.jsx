@@ -4,12 +4,14 @@ import { Button } from 'antd';
 
 const About = (props) =>{
   useEffect(()=>{
+    document.title = 'About页'
     console.log(props.match.params);
   })
   return (
     <div>
       <h3>about</h3>
       <Button><Link to="/">home</Link></Button>
+      <Button><Link to="/b">B</Link></Button>
     </div>
   )
 }

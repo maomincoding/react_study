@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd';
 import { connect } from 'react-redux'
 import HeaderArea from '../components/layout/Header'
 
 const Home = (props) =>{
+  useEffect(()=>{
+    document.title = 'Home页'
+  })
   return (
     <div>
       <HeaderArea></HeaderArea>

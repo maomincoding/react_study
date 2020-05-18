@@ -2,31 +2,25 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../store/index';
-import routes from './routes'
+import loadable from '../util/loadable'
 
-const RouteWithSubRoutes = route => {
-    return (
-        <Provider store = {store}> 
-        <Router>     
-        <Route
-            exact
-            path={route.path}
-            render={props => {
-                document.title = route.title || "默认title";
-                return <route.component {...props} routes={route.routes}></route.component>
-            }}
-        />
+const Home = loadable(()=> import('../views/Home') )
+const About = loadable(()=> import('../views/About') )
+const A = loadable(()=> import('../views/A') )
+const B = loadable(()=> import('../views/B') )
+
+
+const APPRouter = () =>(
+    <Provider store={store}>
+        <Router >
+            <div>
+                <Route exact={true} path="/" component={Home}/>
+                <Route exact={true} path="/about/:id" component={About}/>
+                <Route exact={true} path="/a" component={A}/>
+                <Route exact={true} path="/b" component={B}/>
+            </div>
         </Router>
-        </Provider>
-    );
-};
-const router = () => {
-    return (
-                routes.map((route, i) => {
-                    return <RouteWithSubRoutes key={i} {...route} />
-                })
-    )
-   
-};
-export default router
+    </Provider>
+);
 
+export default APPRouter
