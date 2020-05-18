@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
-import '../assets/css/home.css'
+import '../../assets/css/home.css'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd';
 import { connect } from 'react-redux'
-import HeaderArea from '../components/layout/Header'
-import {Click,Click2} from '../styleJS/index'
-
+import HeaderArea from '../../components/layout/Header'
+import {Click,Click2} from './styleJs/style'
+import { actionsCreator} from './store/'
 const Home = (props) =>{
   useEffect(()=>{
     document.title = 'Home页'
@@ -25,17 +25,14 @@ const Home = (props) =>{
 
 const mapStateToProps = (state)=> {
   return {
-    name:state.name
+    name: state.getIn(['home', 'name']), 
   }
 }
 
 const mapDispatchToProps = (dispatch)=> {
   return {
     handerClick(){
-      const action = {
-        type:'click'
-      }
-      dispatch(action);
+      dispatch(actionsCreator.click());
     }
   }
 }

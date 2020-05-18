@@ -1,14 +1,8 @@
-let defaultState = {
-  name:'maomin',
-  list:[]
-}
+import { combineReducers } from 'redux-immutable'
+import { reducer as homeReducer } from '../views/Home/store/'
 
-export default (state=defaultState,action) =>{
-  if(action.type === 'click') {
-    const newState = JSON.parse(JSON.stringify(state));
-    newState.list.push(1);
-    console.log(newState.list);
-    return newState
-  }
-  return state
-}
+const reducer = combineReducers({
+  home: homeReducer
+})
+
+export default reducer
