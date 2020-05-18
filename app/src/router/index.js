@@ -6,8 +6,6 @@ import loadable from '../util/loadable'
 
 const Home = loadable(()=> import('../views/Home') )
 const About = loadable(()=> import('../views/About') )
-const A = loadable(()=> import('../views/A') )
-const B = loadable(()=> import('../views/B') )
 
 
 const APPRouter = () =>(
@@ -16,8 +14,6 @@ const APPRouter = () =>(
             <div>
                 <Route exact={true} path="/" component={Home}/>
                 <Route exact={true} path="/about/:id" component={About}/>
-                <Route exact={true} path="/a" component={A}/>
-                <Route exact={true} path="/b" component={B}/>
             </div>
         </Router>
     </Provider>
