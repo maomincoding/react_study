@@ -1,17 +1,18 @@
 import {actionsTypes} from './index'
+import {fromJS} from 'immutable'
 
-let defaultState = {
+let defaultState = fromJS({
     name: 'maomin',
-    list: []
-}
+    list: [],
+    datalist: []
+})
 
 export default (state = defaultState, action) => {
     switch (action.type) {
         case actionsTypes.CLICK:
-            const newState = JSON.parse(JSON.stringify(state));
-            newState.list.push(1);
-            console.log(newState.list);
-            return newState
+            return state.set('list',[1])
+        case actionsTypes.DATA_LIST:
+            return state.set('datalist',action.data)
         default:
             return state;
     }
