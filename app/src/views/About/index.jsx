@@ -6,7 +6,7 @@ const About = (props) =>{
   useEffect(()=>{
     document.title = 'About页'
     console.log(props.match.params);
-  })
+  },[props.match.params])
   return (
     <div>
       <h3>about</h3>
