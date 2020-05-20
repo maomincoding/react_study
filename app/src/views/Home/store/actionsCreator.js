@@ -1,5 +1,5 @@
 import {actionsTypes} from './index'
-import axios from 'axios'
+import {homeData} from '../../../request/api'
 import {fromJS} from 'immutable'
 
 export const click =()=>{
@@ -23,9 +23,9 @@ const dataList =(data) =>{
 
 export const getList = () =>{
     return (dispatch) =>{
-        axios.get('/api/home.json').then((res)=>{
+        homeData().then((res)=>{
             const data = res.data;
-            const action = dataList(data.data);
+            const action = dataList(data);
             dispatch(action);
         }).catch((err)=>{
             console.log(err);

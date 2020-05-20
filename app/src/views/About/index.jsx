@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { actionsCreator } from './store/'
 import { Link } from 'react-router-dom'
 import {Border,TxtTwo } from './styleJs/style'
-
+import DrawerView from '../../components/modules/DrawerView'
 import { Button } from 'antd';
 
 const mapStateToProps = (state) =>{
@@ -38,6 +38,9 @@ const About = (props) =>{
       </Border>
       <Border>
           <TxtTwo>我是继承</TxtTwo>
+      </Border>
+      <Border>
+      <DrawerView></DrawerView>
       </Border>
     </div>
   )
