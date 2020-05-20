@@ -1,8 +1,9 @@
 import {actionsTypes} from './index'
 import {fromJS} from 'immutable'
+let i = 0;
 
 let defaultState = fromJS({
-    name: 'maomin',
+    name: '列表',
     list: [],
     datalist: [],
     flag:false
@@ -11,7 +12,8 @@ let defaultState = fromJS({
 export default (state = defaultState, action) => {
     switch (action.type) {
         case actionsTypes.CLICK:
-            return state.set('list',[1])
+            i++;
+            return state.set('list',state.get('list').push(i))
         case actionsTypes.DATA_LIST:
             return state.set('datalist',action.data)
         case actionsTypes.ANIMAT:
