@@ -8,7 +8,9 @@ import { Button } from 'antd';
 
 const mapStateToProps = (state) =>{
   return {
-    title:state.get('about').get('title')
+    title:state.get('about').get('title'),
+    a1:state.get('about').get('a1'),
+    a2:state.get('about').get('a2')
   }
 }
 
@@ -16,12 +18,15 @@ const mapDispatchToProps = (dispatch) =>{
   return {
     changeTxt(){
       dispatch(actionsCreator.txt());
+    },
+    changeAvalue(){
+      dispatch(actionsCreator.avalue());
     }
   }
 }
 
 const About = (props) =>{
-  const {title,changeTxt} = props;
+  const { title, changeTxt, a1, a2, changeAvalue} = props;
 
   useEffect(()=>{
     document.title = 'About页'
@@ -41,6 +46,11 @@ const About = (props) =>{
       </Border>
       <Border>
       <DrawerView></DrawerView>
+      </Border>
+      <Border>
+        <p>{a1}</p>
+        <p>{a2}</p>
+        <Button onClick={changeAvalue}>merge</Button>
       </Border>
     </div>
   )

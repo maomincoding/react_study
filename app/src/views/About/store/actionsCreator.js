@@ -5,3 +5,9 @@ export const txt = ()=>{
     type:actionsTypes.TXT
   }
 }
+
+export const avalue =  ()=>{
+  return {
+    type:actionsTypes.AVALUE
+  }
+}
