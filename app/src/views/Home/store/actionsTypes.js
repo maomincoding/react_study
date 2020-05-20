@@ -1,3 +1,3 @@
-export const CLICK = 'click';
-export const DATA_LIST = 'data_list';
-export const ANIMAT = 'animat';
+export const CLICK = 'home/CLICK';
+export const DATA_LIST = 'home/DATA_LIST';
+export const ANIMAT = 'home/ANIMAT';

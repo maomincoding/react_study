@@ -1,1 +1,1 @@
-export const TXT = 'txt';
+export const TXT = 'about/TXT';
