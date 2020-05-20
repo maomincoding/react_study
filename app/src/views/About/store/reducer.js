@@ -9,12 +9,10 @@ let defaultState = fromJS({
 })
 
 export default (state = defaultState,action) =>{
-  // switch (actions.type) {
-  //   case actionsTypes.TITLE:
-  //     return state.set()
-  //     break;
-  //   default:
-  //     return state;
-  // }
-  return state;
+  switch (action.type) {
+    case actionsTypes.TXT:
+      return state.set('title','我是改变的title')
+    default:
+      return state;
+  }
 } 

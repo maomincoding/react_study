@@ -4,9 +4,10 @@ import { Provider } from 'react-redux';
 import store from '../store/index';
 import loadable from '../util/loadable'
 
-const Home = loadable(()=> import('../views/Home/') )
-const About = loadable(()=> import('../views/About/') )
-
+// const Home = loadable(()=> import('../views/Home/') )
+// const About = loadable(()=> import('../views/About/') )
+import Home from '../views/Home'
+import About from '../views/About'
 
 const APPRouter = () =>(
     <Provider store={store}>

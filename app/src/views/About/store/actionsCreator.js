@@ -1,7 +1,7 @@
 import {actionsTypes} from './index'
 
-export const tit = ()=>{
+export const txt = ()=>{
   return {
-    type:actionsTypes.TITLE
+    type:actionsTypes.TXT
   }
 }
