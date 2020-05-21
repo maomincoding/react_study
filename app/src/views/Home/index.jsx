@@ -49,7 +49,7 @@ const Home = (props) => {
         dataSource={newList}
         renderItem={item => (
           <List.Item>
-            {item}
+            <Link to={"/about/"+ item.id}>{item.txt}</Link>  
           </List.Item>
         )}
       />
