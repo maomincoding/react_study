@@ -1,19 +1,14 @@
 import styled from 'styled-components'
 
-export const Click = styled.div `
+export const Click = styled.p `
   color:red;
   font-size:20px;
 `
-export const Border = styled.div `
-  border:1px solid #1890ff;
-  margin:10px;
-  padding:10px;
-`
-export const Click2 = styled.div `
+export const Click2 = styled.p `
   color:${props => props.color ? "blue" : "red"};
   font-size:20px;
 `
-export const Divtransition = styled.div `
+export const Divtransition = styled.p `
   font-size:26px;
     .fade-enter {
       opacity: 0;

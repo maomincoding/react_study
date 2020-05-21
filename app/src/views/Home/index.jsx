@@ -4,7 +4,8 @@ import '../../assets/css/home.css'
 import { Link } from 'react-router-dom'
 import { Button, List } from 'antd';
 import { connect } from 'react-redux'
-import { Click, Click2, Divtransition, Border } from './styleJs/style'
+import { Border } from '../../styled'
+import { Click, Click2, Divtransition} from './styleJs/style'
 import { actionsCreator } from './store/'
 
 const mapStateToProps = (state) => {

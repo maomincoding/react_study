@@ -2,7 +2,8 @@ import React,{useEffect} from 'react'
 import { connect } from 'react-redux'
 import { actionsCreator } from './store/'
 import { Link } from 'react-router-dom'
-import {Border,TxtTwo } from './styleJs/style'
+import { Border } from '../../styled'
+import { TxtTwo } from './styleJs/style'
 import DrawerView from '../../components/modules/DrawerView'
 import { Button } from 'antd';
 
@@ -36,7 +37,10 @@ const About = (props) =>{
     <div>
       <Border>
          <p>{title}</p>
-         <Button><Link to="/">home</Link></Button>
+         <Button type="primary"><Link to="/">跳转到home页</Link></Button>
+      </Border>
+      <Border>
+        <Button type="primary"><Link to="/more">跳转到more页</Link></Button>
       </Border>
       <Border>
          <Button onClick={changeTxt}>我要改变标题</Button>
