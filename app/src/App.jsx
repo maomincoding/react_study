@@ -7,9 +7,9 @@ import FooterArea from './components/layout/Footer';
 const App = () =>{
   return (
       <div>
-        <GlobalStyle></GlobalStyle>
+        <GlobalStyle/>
         <HeaderArea/>
-          <Router/>
+        <Router/>
         <FooterArea/>
       </div>
   )
