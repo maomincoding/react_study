@@ -1,4 +1,4 @@
-import React,{ useState }from 'react'
+import React,{ useState }from 'react';
 import { Drawer,Button  } from 'antd';
 
 const DrawerView = (props) =>{
@@ -27,7 +27,7 @@ const DrawerView = (props) =>{
       </Drawer>
     </div>
   )
-}
+};
 
 
-export default DrawerView
+export default DrawerView;

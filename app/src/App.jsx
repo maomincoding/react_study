@@ -1,8 +1,8 @@
-import React from 'react'
-import Router from './router'
-import {GlobalStyle} from '../src/styled/index'
-import HeaderArea from './components/layout/Header'
-import FooterArea from './components/layout/Footer'
+import React from 'react';
+import Router from './router';
+import {GlobalStyle} from '../src/styled/index';
+import HeaderArea from './components/layout/Header';
+import FooterArea from './components/layout/Footer';
 
 const App = () =>{
   return (
@@ -13,5 +13,6 @@ const App = () =>{
         <FooterArea/>
       </div>
   )
-}
-export default App
+};
+
+export default App;

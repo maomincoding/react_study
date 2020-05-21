@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 // 环境的切换
 if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = '/' // 开发环境

@@ -1,5 +1,5 @@
-import {actionsTypes} from './index'
-import {fromJS} from 'immutable'
+import {actionsTypes} from './index';
+import {fromJS} from 'immutable';
 let i = 0;
 
 let defaultState = fromJS({
@@ -7,7 +7,7 @@ let defaultState = fromJS({
     list: [],
     datalist: [],
     flag:false
-})
+});
 
 export default (state = defaultState, action) => {
     switch (action.type) {
@@ -21,4 +21,4 @@ export default (state = defaultState, action) => {
         default:
             return state;
     }
-}
+};

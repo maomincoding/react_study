@@ -2,11 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../store/index';
-import loadable from '../util/loadable'
-
-const Home = loadable(()=> import('../views/Home/') )
-const About = loadable(()=> import('../views/About/') )
-const More = loadable(()=> import('../views/More/'))
+import {Home,About,More} from './routes'
 
 const APPRouter = () =>(
     <Provider store={store}>
@@ -20,4 +16,4 @@ const APPRouter = () =>(
     </Provider>
 );
 
-export default APPRouter
+export default APPRouter;

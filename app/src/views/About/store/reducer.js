@@ -1,5 +1,5 @@
-import {actionsTypes} from './index'
-import {fromJS} from 'immutable'
+import {actionsTypes} from './index';
+import {fromJS} from 'immutable';
 
 let defaultState = fromJS({
   title: 'About页',
@@ -8,7 +8,7 @@ let defaultState = fromJS({
   flag:false,
   a1:'a1',
   a2:'a2'
-})
+});
 
 export default (state = defaultState,action) =>{
   switch (action.type) {
@@ -22,4 +22,4 @@ export default (state = defaultState,action) =>{
     default:
       return state;
   }
-} 
+};

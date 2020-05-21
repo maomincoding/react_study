@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Layout } from 'antd';
 
-const { Footer } = Layout;
-
 const FooterArea = () => {
+  const { Footer } = Layout;
   return (
     <div>
       <Layout>
@@ -11,6 +10,6 @@ const FooterArea = () => {
       </Layout>
     </div>
   )
-}
+};
 
-export default FooterArea
+export default FooterArea;

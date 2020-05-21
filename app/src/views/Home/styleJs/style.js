@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Click = styled.p `
   color:red;
   font-size:20px;
-`
+`;
 export const Click2 = styled.p `
   color:${props => props.color ? "blue" : "red"};
   font-size:20px;
-`
+`;
 export const Divtransition = styled.p `
   font-size:26px;
     .fade-enter {
@@ -28,4 +28,4 @@ export const Divtransition = styled.p `
       opacity: 0;
       transform: translate(0,200px);
     }
-`
+`;

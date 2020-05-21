@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import '../../assets/css/home.css'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import '../../assets/css/home.css';
+import { Link } from 'react-router-dom';
 import { Button, List } from 'antd';
-import { connect } from 'react-redux'
-import { Border } from '../../styled'
-import { Click, Click2, Divtransition} from './styleJs/style'
-import { actionsCreator } from './store/'
+import { connect } from 'react-redux';
+import { Border } from '../../styled';
+import { Click, Click2, Divtransition} from './styleJs/style';
+import { actionsCreator } from './store/';
 
 const mapStateToProps = (state) => {
   return {
@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
     datalist: state.getIn(['home', 'datalist']),
     flag: state.getIn(['home', 'flag'])
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionsCreator.getList())
     }
   }
-}
+};
 
 const Home = (props) => {
   const { name, list, datalist, handerClick, clickAnimation, flag, getdata } = props;
@@ -55,10 +55,10 @@ const Home = (props) => {
       />
       </Border>
       <Border>
-        <Button type="primary"><Link to="/about/2">跳转到About页</Link></Button>
+        <Button type="primary"><Link to={"/about/"+2}>跳转到About页</Link></Button>
       </Border>
       <Border>
-        <p>{list}</p>
+        <p>{list}</p> 
         <Button onClick={handerClick}>打印</Button>
       </Border>
       <Border>
@@ -80,6 +80,6 @@ const Home = (props) => {
       </Border>
     </div>
   )
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

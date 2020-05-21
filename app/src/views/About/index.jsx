@@ -1,10 +1,10 @@
-import React,{useEffect} from 'react'
-import { connect } from 'react-redux'
-import { actionsCreator } from './store/'
-import { Link } from 'react-router-dom'
-import { Border } from '../../styled'
-import { TxtTwo } from './styleJs/style'
-import DrawerView from '../../components/modules/DrawerView'
+import React,{useEffect} from 'react';
+import { connect } from 'react-redux';
+import { actionsCreator } from './store/';
+import { Link } from 'react-router-dom';
+import { Border } from '../../styled';
+import { TxtTwo } from './styleJs/style';
+import DrawerView from '../../components/modules/DrawerView';
 import { Button } from 'antd';
 
 const mapStateToProps = (state) =>{
@@ -13,7 +13,7 @@ const mapStateToProps = (state) =>{
     a1:state.get('about').get('a1'),
     a2:state.get('about').get('a2')
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) =>{
   return {
@@ -24,15 +24,14 @@ const mapDispatchToProps = (dispatch) =>{
       dispatch(actionsCreator.avalue());
     }
   }
-}
+};
 
 const About = (props) =>{
   const { title, changeTxt, a1, a2, changeAvalue} = props;
-
   useEffect(()=>{
     document.title = 'About页'
-    console.log(props.match.params);
-  },[props.match.params])
+    console.log(props.match.params.id);
+  },[props.match.params.id])
   return (
     <div>
       <Border>
@@ -58,7 +57,7 @@ const About = (props) =>{
       </Border>
     </div>
   )
-}
+};
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(About)
+export default connect(mapStateToProps, mapDispatchToProps)(About);

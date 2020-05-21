@@ -1,11 +1,10 @@
-import styled,{createGlobalStyle} from 'styled-components'
+import styled,{createGlobalStyle} from 'styled-components';
 
 export const Border = styled.div`
   border:1px solid #1890ff;
   margin:10px;
   padding:10px;
 `
-
 export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -96,9 +95,7 @@ html{
 .dn{
   display: none;
 }
-/*
-自定义
-*/
+/*自定义*/
 p{
   margin:10px;
 }

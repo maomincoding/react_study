@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Layout } from 'antd';
 
-const { Header } = Layout;
-
 const HeaderArea = () => {
+  const { Header } = Layout;
   return (
     <div>
       <Layout>
@@ -11,6 +10,6 @@ const HeaderArea = () => {
       </Layout>
     </div>
   )
-}
+};
 
-export default HeaderArea
+export default HeaderArea;
